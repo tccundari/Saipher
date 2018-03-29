@@ -1,0 +1,7 @@
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\bin\Debug\SCV.DataObjects.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\bin\Debug\SCV.DataObjects.pdb
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\obj\Debug\SCV.DataObjects.csprojResolveAssemblyReference.cache
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\obj\Debug\SCV.DataObjects.csproj.CoreCompileInputs.cache
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\obj\Debug\SCV.DataObjects.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\obj\Debug\SCV.DataObjects.pdb
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.DataObjects\bin\Debug\SCV.DataObjects.dll.config

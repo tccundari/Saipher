@@ -1,0 +1,14 @@
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.Business.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.Business.pdb
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.DataObjects.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.Domain.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.DataObjects.pdb
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.DataObjects.dll.config
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\SCV.Domain.pdb
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\obj\Debug\SCV.Business.csprojResolveAssemblyReference.cache
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\obj\Debug\SCV.Business.csproj.CoreCompileInputs.cache
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\obj\Debug\SCV.Business.csproj.CopyComplete
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\obj\Debug\SCV.Business.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\obj\Debug\SCV.Business.pdb
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\Ninject.dll
+C:\Trabalho\Saipher\SaipherControleVoo\SCV.Business\bin\Debug\Ninject.xml

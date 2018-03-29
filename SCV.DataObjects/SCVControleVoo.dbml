@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SaipherControleVoo" EntityNamespace="SCV.Entity" ContextNamespace="SCV.Facade" Class="SCVControleVooDataContext" AccessModifier="Internal" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost\sqlexpress;Initial Catalog=SaipherControleVoo;Integrated Security=True" SettingsObjectName="SCV.DataObjects.Properties.Settings" SettingsPropertyName="SaipherControleVooConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TB_SCV_AERONAVE" Member="TB_SCV_AERONAVE">
+    <Type Name="TB_SCV_AERONAVE">
+      <Column Name="ID_SCV_AERONAVE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_SCV_FABRICANTE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NM_NOME_AERONAVE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_MODELO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NR_PASSAGEIROS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ATUALIZACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TB_SCV_AERONAVE_TB_SCV_FROTA" Member="TB_SCV_FROTA" ThisKey="ID_SCV_AERONAVE" OtherKey="FK_SCV_AERONAVE" Type="TB_SCV_FROTA" />
+      <Association Name="TB_SCV_FABRICANTE_TB_SCV_AERONAVE" Member="TB_SCV_FABRICANTE" ThisKey="FK_SCV_FABRICANTE" OtherKey="ID_SCV_FABRICANTE" Type="TB_SCV_FABRICANTE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SCV_CENTRO_OPERACAO" Member="TB_SCV_CENTRO_OPERACAO">
+    <Type Name="TB_SCV_CENTRO_OPERACAO">
+      <Column Name="ID_SCV_CENTRO_OPERACAO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NM_CENTRO_OPERACAO" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_IATA" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_ICAO" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_LOCALIZACAO" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BT_ATIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ATUALIZACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TB_SCV_CENTRO_OPERACAO_TB_SCV_PLANO_VOO" Member="TB_SCV_PLANO_VOO" ThisKey="ID_SCV_CENTRO_OPERACAO" OtherKey="FK_SCV_CENTRO_OPERACAO_ORIGEM" Type="TB_SCV_PLANO_VOO" />
+      <Association Name="TB_SCV_CENTRO_OPERACAO_TB_SCV_PLANO_VOO1" Member="TB_SCV_PLANO_VOO1" ThisKey="ID_SCV_CENTRO_OPERACAO" OtherKey="FK_SCV_CENTRO_OPERACAO_DESTINO" Type="TB_SCV_PLANO_VOO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SCV_COMPANHIA" Member="TB_SCV_COMPANHIA">
+    <Type Name="TB_SCV_COMPANHIA">
+      <Column Name="ID_SCV_COMPANHIA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NM_COMPANHIA" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_IATA" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_ICAO" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_INDICATIVO_CHAMADA" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BT_ATIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ATUALIZACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TB_SCV_COMPANHIA_TB_SCV_FROTA" Member="TB_SCV_FROTA" ThisKey="ID_SCV_COMPANHIA" OtherKey="FK_SCV_COMPANHIA" Type="TB_SCV_FROTA" />
+      <Association Name="TB_SCV_COMPANHIA_TB_SCV_PLANO_VOO" Member="TB_SCV_PLANO_VOO" ThisKey="ID_SCV_COMPANHIA" OtherKey="FK_SCV_COMPANHIA" Type="TB_SCV_PLANO_VOO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SCV_FABRICANTE" Member="TB_SCV_FABRICANTE">
+    <Type Name="TB_SCV_FABRICANTE">
+      <Column Name="ID_SCV_FABRICANTE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NM_RAZAO_SOCIAL" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_FABRICANTE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_PAIS" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ALTERACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TB_SCV_FABRICANTE_TB_SCV_AERONAVE" Member="TB_SCV_AERONAVE" ThisKey="ID_SCV_FABRICANTE" OtherKey="FK_SCV_FABRICANTE" Type="TB_SCV_AERONAVE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SCV_FROTA" Member="TB_SCV_FROTA">
+    <Type Name="TB_SCV_FROTA">
+      <Column Name="ID_SCV_FROTA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_SCV_COMPANHIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_SCV_AERONAVE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NM_MATRICULA" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NR_SERIE" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DT_FABRICACAO" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DT_COMPRA_TRANSFERENCIA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="BT_ATIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ATUALIZACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TB_SCV_FROTA_TB_SCV_PLANO_VOO" Member="TB_SCV_PLANO_VOO" ThisKey="ID_SCV_FROTA" OtherKey="FK_SCV_FROTA" Type="TB_SCV_PLANO_VOO" />
+      <Association Name="TB_SCV_AERONAVE_TB_SCV_FROTA" Member="TB_SCV_AERONAVE" ThisKey="FK_SCV_AERONAVE" OtherKey="ID_SCV_AERONAVE" Type="TB_SCV_AERONAVE" IsForeignKey="true" />
+      <Association Name="TB_SCV_COMPANHIA_TB_SCV_FROTA" Member="TB_SCV_COMPANHIA" ThisKey="FK_SCV_COMPANHIA" OtherKey="ID_SCV_COMPANHIA" Type="TB_SCV_COMPANHIA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_SCV_FROTA_AERONAVE" Member="VW_SCV_FROTA_AERONAVE">
+    <Type Name="VW_SCV_FROTA_AERONAVE">
+      <Column Name="ID_SCV_FROTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_SCV_AERONAVE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_SCV_COMPANHIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NM_MATRICULA" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NR_SERIE" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DT_FABRICACAO" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DT_COMPRA_TRANSFERENCIA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="NM_NOME_AERONAVE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_MODELO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TB_SCV_PLANO_VOO" Member="TB_SCV_PLANO_VOO">
+    <Type Name="TB_SCV_PLANO_VOO">
+      <Column Name="ID_SCV_PLANO_VOO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_SCV_COMPANHIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_SCV_FROTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DT_VOO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FK_SCV_CENTRO_OPERACAO_ORIGEM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_SCV_CENTRO_OPERACAO_DESTINO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BT_ATIVO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ATUALIZACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TB_SCV_CENTRO_OPERACAO_TB_SCV_PLANO_VOO" Member="TB_SCV_CENTRO_OPERACAO" ThisKey="FK_SCV_CENTRO_OPERACAO_ORIGEM" OtherKey="ID_SCV_CENTRO_OPERACAO" Type="TB_SCV_CENTRO_OPERACAO" IsForeignKey="true" />
+      <Association Name="TB_SCV_CENTRO_OPERACAO_TB_SCV_PLANO_VOO1" Member="TB_SCV_CENTRO_OPERACAO1" ThisKey="FK_SCV_CENTRO_OPERACAO_DESTINO" OtherKey="ID_SCV_CENTRO_OPERACAO" Type="TB_SCV_CENTRO_OPERACAO" IsForeignKey="true" />
+      <Association Name="TB_SCV_COMPANHIA_TB_SCV_PLANO_VOO" Member="TB_SCV_COMPANHIA" ThisKey="FK_SCV_COMPANHIA" OtherKey="ID_SCV_COMPANHIA" Type="TB_SCV_COMPANHIA" IsForeignKey="true" />
+      <Association Name="TB_SCV_FROTA_TB_SCV_PLANO_VOO" Member="TB_SCV_FROTA" ThisKey="FK_SCV_FROTA" OtherKey="ID_SCV_FROTA" Type="TB_SCV_FROTA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_SCV_PLANO_VOO_INFORMACAO" Member="VW_SCV_PLANO_VOO_INFORMACAO">
+    <Type Name="VW_SCV_PLANO_VOO_INFORMACAO">
+      <Column Name="ID_SCV_PLANO_VOO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_SCV_COMPANHIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_SCV_FROTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_SCV_CENTRO_OPERACAO_ORIGEM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_SCV_CENTRO_OPERACAO_DESTINO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NUMERO_VOO" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DT_VOO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_CADASTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DT_ATUALIZACAO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NM_COMPANHIA" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="COMPANHIA_ICAO" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_NOME_AERONAVE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NM_MATRICULA" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NR_SERIE" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CENTRO_OPERACAO_ORIGEM" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CENTRO_OPERACAO_DESTINO" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

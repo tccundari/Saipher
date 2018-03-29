@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAF1A8F2-2311-45B8-9A79-874A57553ED8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SCV.Presentation</RootNamespace>
+    <AssemblyName>SCV.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controles\frmSelecionarCentroOperacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\frmSelecionarCentroOperacoes.Designer.cs">
+      <DependentUpon>frmSelecionarCentroOperacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\frmSelecionarAeronaveFrota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\frmSelecionarAeronaveFrota.Designer.cs">
+      <DependentUpon>frmSelecionarAeronaveFrota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UcHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UcHome.Designer.cs">
+      <DependentUpon>UcHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UcModuloPlanoVoo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UcModuloPlanoVoo.Designer.cs">
+      <DependentUpon>UcModuloPlanoVoo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\UcLabelDateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UcLabelDateTimePicker.Designer.cs">
+      <DependentUpon>UcLabelDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UcLabelTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UcLabelTextBox.Designer.cs">
+      <DependentUpon>UcLabelTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UcSeletor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UcSeletor.Designer.cs">
+      <DependentUpon>UcSeletor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UcSeletorCentroOperacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UcSeletorCentroOperacao.Designer.cs">
+      <DependentUpon>UcSeletorCentroOperacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UcSeletorFrota.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UcSeletorFrota.Designer.cs">
+      <DependentUpon>UcSeletorFrota.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controles\frmSelecionarCentroOperacoes.resx">
+      <DependentUpon>frmSelecionarCentroOperacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\frmSelecionarAeronaveFrota.resx">
+      <DependentUpon>frmSelecionarAeronaveFrota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UcHome.resx">
+      <DependentUpon>UcHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UcModuloPlanoVoo.resx">
+      <DependentUpon>UcModuloPlanoVoo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UcLabelDateTimePicker.resx">
+      <DependentUpon>UcLabelDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UcLabelTextBox.resx">
+      <DependentUpon>UcLabelTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UcSeletor.resx">
+      <DependentUpon>UcSeletor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UcSeletorCentroOperacao.resx">
+      <DependentUpon>UcSeletorCentroOperacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UcSeletorFrota.resx">
+      <DependentUpon>UcSeletorFrota.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\SCV.Entity.TB_SCV_CENTRO_OPERACAO.datasource" />
+    <None Include="Properties\DataSources\SCV.Entity.VW_SCV_FROTA_AERONAVE.datasource" />
+    <None Include="Properties\DataSources\SCV.Entity.VW_SCV_PLANO_VOO_INFORMACAO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCV.Business\SCV.Business.csproj">
+      <Project>{08da0295-5a43-4147-840d-d7cb272e6b74}</Project>
+      <Name>SCV.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCV.DataObjects\SCV.DataObjects.csproj">
+      <Project>{a2ca706b-b058-4957-8286-c3fed0037f92}</Project>
+      <Name>SCV.DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCV.Interfaces\SCV.Domain.csproj">
+      <Project>{9ee3590c-028b-4f1c-9e26-33d1b65a910b}</Project>
+      <Name>SCV.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_saipher.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

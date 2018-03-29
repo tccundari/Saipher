@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.125, 8.5" name="SCVControleVoo">
+  <DataContextMoniker Name="/SCVControleVooDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7aa61910-a347-4c7c-9056-5bcf4ab35a0d" absoluteBounds="3.5, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SCVControleVooDataContext/TB_SCV_AERONAVE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c3e0f23-079c-4a19-aa14-b13c47095f1f" absoluteBounds="3.515, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a8b4309-a199-49af-8c6f-a7d01aeab369" absoluteBounds="7, 4, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SCVControleVooDataContext/TB_SCV_CENTRO_OPERACAO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eaa5c0cd-884c-434c-8a60-2a8eaf9b46e8" absoluteBounds="7.015, 4.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee219ab5-7fe3-47f3-aa01-7548ceeba34f" absoluteBounds="3.625, 4.5, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/SCVControleVooDataContext/TB_SCV_COMPANHIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e26b146d-9fe5-4f77-a4dc-5f9faac8aeef" absoluteBounds="3.64, 4.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc4bcf2f-6003-4c36-a2a2-83137bfcc302" absoluteBounds="0.75, 1.375, 2, 1.9631982421874998">
+      <DataClassMoniker Name="/SCVControleVooDataContext/TB_SCV_FABRICANTE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bfcaab9f-873a-4cd5-8268-f39462ef0689" absoluteBounds="0.765, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ca3e7b3-e6ee-469b-a1d0-fa30c8db55b0" absoluteBounds="6.25, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/SCVControleVooDataContext/TB_SCV_FROTA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76144aa7-6cf2-421d-b236-faed9864fbef" absoluteBounds="6.265, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.35659912109375); (3.5 : 2.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_FABRICANTE/TB_SCV_FABRICANTE_TB_SCV_AERONAVE" />
+      <nodes>
+        <classShapeMoniker Id="cc4bcf2f-6003-4c36-a2a2-83137bfcc302" />
+        <classShapeMoniker Id="7aa61910-a347-4c7c-9056-5bcf4ab35a0d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.32774983723958); (6.25 : 2.32774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_AERONAVE/TB_SCV_AERONAVE_TB_SCV_FROTA" />
+      <nodes>
+        <classShapeMoniker Id="7aa61910-a347-4c7c-9056-5bcf4ab35a0d" />
+        <classShapeMoniker Id="1ca3e7b3-e6ee-469b-a1d0-fa30c8db55b0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.59375 : 4.5); (5.59375 : 3.60020182291667); (6.25 : 3.60020182291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_COMPANHIA/TB_SCV_COMPANHIA_TB_SCV_FROTA" />
+      <nodes>
+        <classShapeMoniker Id="ee219ab5-7fe3-47f3-aa01-7548ceeba34f" />
+        <classShapeMoniker Id="1ca3e7b3-e6ee-469b-a1d0-fa30c8db55b0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="af3e4569-68ce-43d2-a38b-a26573124e45" absoluteBounds="9.25, 1.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/SCVControleVooDataContext/VW_SCV_FROTA_AERONAVE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5df0ef3-6fda-49ba-b5d7-77fc35c8b25c" absoluteBounds="9.265, 2.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2e340fa-8303-4c13-a4d3-3b3f1d643342" absoluteBounds="10.875, 5.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/SCVControleVooDataContext/TB_SCV_PLANO_VOO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db5a631a-ab4c-49c0-9682-29f18c97146e" absoluteBounds="10.89, 5.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9 : 5.92390055338542); (10.875 : 5.92390055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_CENTRO_OPERACAO/TB_SCV_CENTRO_OPERACAO_TB_SCV_PLANO_VOO" />
+      <nodes>
+        <classShapeMoniker Id="8a8b4309-a199-49af-8c6f-a7d01aeab369" />
+        <classShapeMoniker Id="d2e340fa-8303-4c13-a4d3-3b3f1d643342" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 5.64945027669271); (10.875 : 5.64945027669271)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_CENTRO_OPERACAO/TB_SCV_CENTRO_OPERACAO_TB_SCV_PLANO_VOO1" />
+      <nodes>
+        <classShapeMoniker Id="8a8b4309-a199-49af-8c6f-a7d01aeab369" />
+        <classShapeMoniker Id="d2e340fa-8303-4c13-a4d3-3b3f1d643342" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.625 : 6.62905110677083); (10.875 : 6.62905110677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_COMPANHIA/TB_SCV_COMPANHIA_TB_SCV_PLANO_VOO" />
+      <nodes>
+        <classShapeMoniker Id="ee219ab5-7fe3-47f3-aa01-7548ceeba34f" />
+        <classShapeMoniker Id="d2e340fa-8303-4c13-a4d3-3b3f1d643342" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.59375 : 3.73240397135417); (6.59375 : 7.36582932291667); (10.875 : 7.36582932291667)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SCVControleVooDataContext/TB_SCV_FROTA/TB_SCV_FROTA_TB_SCV_PLANO_VOO" />
+      <nodes>
+        <classShapeMoniker Id="1ca3e7b3-e6ee-469b-a1d0-fa30c8db55b0" />
+        <classShapeMoniker Id="d2e340fa-8303-4c13-a4d3-3b3f1d643342" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0380e047-d9dc-4db5-a7e5-c933343e31fd" absoluteBounds="11.875, 1.375, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/SCVControleVooDataContext/VW_SCV_PLANO_VOO_INFORMACAO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7304b5ea-301b-4946-9fe0-72158ef73805" absoluteBounds="11.89, 1.835, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
